@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-background;
+}
+
+.marquee {
+  animation: scrollText 15s infinite linear;
+  white-space: nowrap;
+  transition: all 1s ease;
+  display: inline-block;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: "Satoshi-Variable";
+  src: url("../public/assets/fonts/Satoshi-Variable.woff2") format("woff2");
+
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi-VariableItalic";
+  src: url("../public/assets/fonts/Satoshi-VariableItalic.woff2")
+    format("woff2");
+
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+}
